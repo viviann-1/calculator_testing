@@ -14,7 +14,7 @@ describe('sum', () => {
     const actual = sum(2, 3);
     expect(actual).toBe(expected);
   });
-  
+
   test('can add two large positive numbers', () => { 
     const expected = 100;
     const actual = sum(50, 50);
@@ -44,7 +44,7 @@ describe('subtract', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can subtract two large numbers', () =>{
+  test('can subtract two large positive numbers', () =>{
     const expected = 1000;
     const actual = subtract(3000, 2000);
     expect(actual).toBe(expected);
@@ -72,7 +72,7 @@ describe('multiply', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can multiply two large numbers', () =>{
+  test('can multiply two large positive numbers', () =>{
     const expected = 900;
     const actual = multiply(30, 30);
     expect(actual).toBe(expected);
@@ -99,7 +99,7 @@ describe('divide', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can divide two large numbers', () =>{
+  test('can divide two large positive numbers', () =>{
     const expected = 30;
     const actual = divide(90, 3);
     expect(actual).toBe(expected);
@@ -121,6 +121,23 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test('can modulus to positive numbers', () =>{
+    const expected = 1;
+    const actual = modulus(5, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can modulus to large positive numbers', () =>{
+    const expected = 5;
+    const actual = divide(1000, 200);
+    expect(actual).toBe(expected);
+  });
+
+  test('can modulus to negative numbers', () =>{
+    const expected = 2.5;
+    const actual = divide(-5, -2);
+    expect(actual).toBe(expected);
+  });
 
 });
 
