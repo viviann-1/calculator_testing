@@ -9,13 +9,12 @@ const {
 } = require("./calculator");
 
 describe('sum', () => { 
-  
   test('can add two small positive numbers', () => {
     const expected = 5;
     const actual = sum(2, 3);
     expect(actual).toBe(expected);
   });
-
+  
   test('can add two large positive numbers', () => { 
     const expected = 100;
     const actual = sum(50, 50);
@@ -58,7 +57,7 @@ describe('subtract', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can subtract sero', () =>{
+  test('can subtract zero', () =>{
     const expected = 15;
     const actual = subtract(15, 0);
     expect(actual).toBe(expected);
@@ -85,9 +84,39 @@ describe('multiply', () => {
     expect(actual).toBe(expected);
   });
 
+  test('can multiply by zero', () =>{
+    const expected = 0;
+    const actual = multiply(0, 50);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('divide', () => {
+  test('can divide two positive numbers', () =>{
+    const expected = 8;
+    const actual = divide(16, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two large numbers', () =>{
+    const expected = 30;
+    const actual = divide(90, 3);
+    expect(actual).toBe(expected);
+    
+  });
+
+  test('can divide two negative numbers', () =>{
+    const expected = 2;
+    const actual = divide(-100, -50);
+    expect(actual).toBe(expected);
+
+  });
+  test('can divide by zero', () =>{
+    const expected = 0;
+    const actual = divide(0, 50);
+    expect(actual).toBe(expected);
+  });
 
 });
 
