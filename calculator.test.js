@@ -142,9 +142,31 @@ describe('modulus', () => {
 });
 
 describe('even', () => {
+  test('number is even', () =>{
+    const expected = true;
+    const actual = even(4);
+    expect(actual).toBe(expected);
+  });
+
+  test('number is NOT even', () =>{
+    const expected = false;
+    const actual = even(3);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('odd', () => {
+  test('number is odd', () =>{
+    const expected = true;
+    const actual = odd(17);
+    expect(actual).toBe(expected);
+  });
+
+  test('number is NOT odd', () =>{
+    const expected = false;
+    const actual = odd(22);
+    expect(actual).toBe(expected);
+  });
 
 });

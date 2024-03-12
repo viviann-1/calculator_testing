@@ -18,12 +18,24 @@ const modulus = function(a, b){
     return a % b;
 };
 
-const even = function(a){
-    return ("This number is even")
+const even = function (n){
+    if( n % 2 == 0){
+        return true;
+    }
+    else {
+        return false;
+} 
+}
 
-};
 
-const odd = null;
+const odd = function (n){
+    if( n % 2 !== 0){
+        return true;
+    }
+    else {
+        return false;
+} 
+}
 
 module.exports = { 
     sum, 
